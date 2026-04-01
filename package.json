@@ -7,6 +7,9 @@
     "test": "ng test",
     "test:headless": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "test:mutation": "stryker run",
+    "firestore:upsert-class-docs": "node scripts/upsert-class-docs.mjs",
+    "firestore:upsert-issue16": "node scripts/upsert-class-docs.mjs --source scripts/course-definitions/issue-16.mjs",
+    "firestore:recalc-review-aggregates": "node scripts/recalculate-class-review-aggregates.mjs",
     "deploy": "ng deploy --no-nojekyll && gh-pages -d dist/uiuc-mcs-org -r git@github.com:uiuc-mcs/uiuc-mcs.git -p 4 -t",
     "deploy-uiuc-mcs": "ng build --configuration=uiuc-mcs && ng deploy --base-href=https://uiucmcs.org --cname=uiucmcs.org --repo=git@github.com:uiuc-mcs/uiuc-mcs.git --no-build"
   },
